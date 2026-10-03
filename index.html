@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCULT | Gothic Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ÜST MENÜ -->
+    <header>
+        <div class="logo">O C U L T</div>
+        <nav>
+            <a href="#hero">Araf</a>
+            <a href="#products">Koleksiyon</a>
+            <a href="#about">Manifesto</a>
+            <a href="#contact">Karanlıkta Buluş</a>
+        </nav>
+    </header>
+
+    <!-- MANŞET -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Karanlığın Tasarımı</h1>
+            <p>Sokakların gotik ve industrial estetiği ile yeniden doğuşu.</p>
+            <a href="#products" class="btn">Koleksiyona Dal</a>
+        </div>
+    </section>
+
+    <!-- ÜRÜNLER -->
+    <!-- ÜRÜNLER -->
+    <section id="products" class="products">
+        <h2>Sezon Parçaları & Koleksiyon</h2>
+        <div class="product-grid">
+            
+            <!-- Ürün 1: Mavi Taşlı Hoodie -->
+            <div class="product-card slide-left">
+                <div class="product-img">
+                    <img src="https://cdn.aksesuarix.com/UserFiles/Fotograflar/92392-rhinestones-mavi-tasli-fadeback-oversize-hoodie-fd1009symv-fd1009symv-4.jpg" alt="Rhinestones Mavi Taşlı Hoodie">
+                </div>
+                <h3>Rhinestones Blue Fade</h3>
+                <p class="price">₺1.150</p>
+                <a href="#contact" class="card-btn">Tüket</a>
+            </div>
+
+            <!-- Ürün 2: Tribal Desenli Hoodie (Farklı Renk) -->
+            <div class="product-card slide-up">
+                <div class="product-img">
+                    <img src="https://www.aksesuarix.com/UserFiles/Fotograflar/92343-rhinestones-tribal-oversize-hoodie-fadeboack-04.jpg" alt="Rhinestones Tribal Hoodie">
+                </div>
+                <h3>Tribal Fadeback Hoodie</h3>
+                <p class="price">₺1.150</p>
+                <a href="#contact" class="card-btn">Tüket</a>
+            </div>
+
+            <!-- Ürün 3: Siyah Gotik Hoodie -->
+            <div class="product-card slide-right">
+                <div class="product-img">
+                    <img src="https://m.media-amazon.com/images/I/517C-7KdtoL._AC_UY1000_.jpg" alt="Dark Industrial Hoodie">
+                </div>
+                <h3>Void Industrial Hoodie</h3>
+                <p class="price">₺950</p>
+                <a href="#contact" class="card-btn">Tüket</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MANİFESTO -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Manifesto</h2>
+            <p>Gündüzün gürültüsünden uzak, gecenin renginde saklıyız. Kumaşlarımız is, metal ve sessizlikten ilham alır.</p>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="contact" class="contact">
+        <h2>Karanlık Hat</h2>
+        <p>Özel siparişler ve gizli koleksiyonlar için sinyal gönderin.</p>
+        <a href="mailto:ocult@darkatelier.com" class="btn-dark">İletişime Geç</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 OCULT ATELIER. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- SCROLL EFEKTİ İÇİN JAVASCRIPT -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.slide-left, .slide-right, .slide-up').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
